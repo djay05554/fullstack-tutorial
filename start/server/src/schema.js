@@ -42,7 +42,7 @@ const typeDefs = gql`
 
 	type Mutation {
 		bookTrips(launchIds: [ID]!): TripUpdateResponse!
-		cancelTrips(launchId: ID!): TripUpdateResponse!
+		cancelTrip(launchId: ID!): TripUpdateResponse!
 		login(email: String): String
 	}
 
@@ -58,6 +58,9 @@ const typeDefs = gql`
 		launches: [Launch]!
 	}
 
+	type Missoin {
+		missionPatch(mission: String, size: PatchSize): String
+	}
 `
 
 module.exports = typeDefs
